@@ -17,9 +17,10 @@ namespace k8s_todo_web
             CreateWebHostBuilder(args).Build().Run();
         }
 
-      public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+    public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup();
+                   .UseUrls("http://localhost:3000")
+                .UseStartup<Startup>();
     
     }
 }
