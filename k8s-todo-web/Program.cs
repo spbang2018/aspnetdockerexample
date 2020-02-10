@@ -20,6 +20,6 @@ namespace k8s_todo_web
       public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup();
-    }
+    
     }
 }
