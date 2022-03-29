@@ -1,9 +1,9 @@
-FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+FROM mcr.microsoft.com/dotnet/aspnet:2.1 AS base
   WORKDIR /app
   ENV ASPNETCORE_URLS http://*:5000
   EXPOSE 5000
    
-  FROM microsoft/dotnet:2.1-sdk AS build
+  FROM mcr.microsoft.com/dotnet/sdk:2.1 AS build
   WORKDIR /src
   COPY k8s-todo-api.csproj k8s-todo-api/
   RUN dotnet restore k8s-todo-api/k8s-todo-api.csproj
